@@ -45,24 +45,25 @@ h2 {
 }
 
 /* Navigation Styles */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #2E8B57;
-    z-index: 1000;
-    padding: 0;
-}
-
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 nav ul li {
     margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
 }
 
 nav ul li a {
@@ -86,18 +87,17 @@ html {
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
 }
 
 .gallery-grid img {
-    width: 30%;
-    max-width: 300px;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 5px;
 }
-
 /* Swiper Carousel Styles */
 .swiper-container {
     width: 100%;
@@ -268,11 +268,20 @@ footer {
     color: #FFFFFF;
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the links */
 }
 
 footer .social-media a {
     color: #FFFFFF;
-    margin: 0 10px;
     text-decoration: none;
 }
 
@@ -280,7 +289,26 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
+
 /* Responsive Design */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+form label, form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
