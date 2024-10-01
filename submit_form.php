@@ -12,3 +12,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Inscripción completada con éxito!";
 }
 ?>
+***sdfdsdsdffdsfdddddddd
