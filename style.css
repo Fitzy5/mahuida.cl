@@ -3,13 +3,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
 h1, h2 {
     text-align: center;
-    color: #2E8B57;
+    color: #ffffff;
 }
 
 h1 {
@@ -25,13 +25,26 @@ h2 {
 }
 
 #home {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #40419b;
+    color: rgb(14, 13, 13);
+    flex: 1;
+    min-width: 300px; /* Ensure it's responsive */
 }
+
+/* Parent container to hold the carousel and about us section */
+.content-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures that it wraps on smaller screens */
+    gap: 20px; /* Space between the two sections */
+    justify-content: space-between; /* Space between items */
+}
+
 
 #about {
     background-color: #ecf0f1;
     color: #333;
+    flex: 1;
+    min-width: 300px; /* Ensure it's responsive */
 }
 
 #inscription {
@@ -50,31 +63,37 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap; /* Ensure responsiveness */
 }
+
+/* Style the logo */
+nav ul li.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+nav ul li.logo img {
+    max-width: 320px; /* Adjust the size as needed */
+    height: auto;
+}
+
 
 nav ul li {
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
     padding: 15px;
     display: block;
 }
 
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-}
+
 
 nav ul li a:hover {
-    background-color: #3CB371;
+    background-color: #b3b3b3;
     border-radius: 5px;
 }
 
@@ -104,6 +123,7 @@ html {
     overflow: hidden;
     position: relative;
     margin: 40px auto;
+    height: 300px; /* Adjust as needed */
   }
   
   .swiper-wrapper {
@@ -310,6 +330,11 @@ form label, form input, form textarea {
 
 
 @media (max-width: 768px) {
+    
+    .content-container {
+        flex-direction: column;
+    }
+    
     nav ul {
         flex-direction: column;
     }

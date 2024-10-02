@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constructora Mahuida - Inicio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Swiper CSSSSSSSSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -24,59 +24,68 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#homeeeee">Inicio</a></li>
+            <li class="logo">
+                <img src="LOGO MAHUIDA-tra LB.png" alt="logo mahuida" />
+            </li>
+            <li><a href="#home">Inicio</a></li>
             <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#inscription">Inscripción</a></li>
             <li><a href="#contact-info">Contacto</a></li>
         </ul>
     </nav>
+   
+    <section id="content-container" class="content-container">   <!--"Carousel and about us" -->       
 
-    <!-- Carousel Section -->
-    <section id="home" class="section">
-        <h1>Aislamiento de calidad para hogares cómodos y eficientes</h1>
-        <p id="splash-text">
-            Ofrecemos soluciones de aislamiento de alta calidad para hogares más
-            cómodos y eficientes.
-        </p>
 
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="work1.jpg" alt="Trabajo 1" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="work2.jpg" alt="Trabajo 2" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="work3.jpg" alt="Trabajo 3" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="work4.jpg" alt="Trabajo 4" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="work5.jpg" alt="Trabajo 5" />
+        <div id="about" class="section"> <!-- About Us Section -->
+            <h2>Sobre Nosotros</h2>
+            <p id="about-splash-text">En Constructora Mahuida, nos dedicamos a brindar servicios de aislamiento térmico que mejoran la calidad de vida y ahorran energía.</p>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <img src="work4.jpg" alt="Proyecto 1">
+                <img src="work5.jpg" alt="Proyecto 2">
+                <img src="work6.jpg" alt="Proyecto 3">
+                <img src="work6.jpg" alt="Proyecto 4">
+                <img src="work6.jpg" alt="Proyecto 5">
+            </div>
+        </div>
+
+
+        <div id="home" class="section"><!-- Carousel Section -->
+            <h1>Aislamiento de calidad para hogares cómodos y eficientes</h1>
+            <p id="splash-text">
+                Ofrecemos soluciones de aislamiento de alta calidad para hogares más
+                cómodos y eficientes.
+            </p>
+
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="work1.jpg" alt="Trabajo 1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work2.jpg" alt="Trabajo 2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work3.jpg" alt="Trabajo 3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work4.jpg" alt="Trabajo 4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work5.jpg" alt="Trabajo 5" />
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        
     </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section">
-        <h2>Sobre Nosotros</h2>
-        <p id="about-splash-text">En Constructora Mahuida, nos dedicamos a brindar servicios de aislamiento térmico que mejoran la calidad de vida y ahorran energía.</p>
-
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-            <img src="work4.jpg" alt="Proyecto 1">
-            <img src="work5.jpg" alt="Proyecto 2">
-            <img src="work6.jpg" alt="Proyecto 3">
-            <img src="work6.jpg" alt="Proyecto 4">
-            <img src="work6.jpg" alt="Proyecto 5">
-        </div>
-    </section>
-
+    
     <!-- Inscription Form Section -->
     <section id="inscription" class="section">
         <h2>Formulario de Inscripción</h2>
