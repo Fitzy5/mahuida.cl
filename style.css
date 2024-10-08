@@ -25,23 +25,58 @@ h2 {
 }
 
 #home {
-    background-color: #40419b;
+    background-color: #163597;
     color: rgb(14, 13, 13);
     flex: 1;
     min-width: 300px; /* Ensure it's responsive */
+}
+
+.page-landing {
+    background-color: #474444;
+    display: flex;
+    flex-wrap: nowrap; /* Ensures that it wraps on smaller screens */
+    gap: 10px; /* Space between the two sections */
+    justify-content: flex-start; /* Space between items */
+    width: 100%; /* Adjust the width of the container */
+    height:500px; /* Allow the height to adjust based on content */
+
+}
+.landing-text{
+    background-color: #10811f;
+    display: flex;
+    justify-content: space-between; /* Aligns horizontally: center, flex-start, flex-end, space-between, etc. */
+    align-items: flex-start; /* Aligns vertically: center, flex-start, flex-end, etc. */
+    height: 200px; /* Defines the height of the container */
+}
+
+/* Gallery Styles */
+.volante {
+    background-color: #10811f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.volante img {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 30%;
+    height: auto;
+    object-fit: scale-down;
+    border-radius: 15px;
 }
 
 /* Parent container to hold the carousel and about us section */
 .content-container {
     display: flex;
     flex-wrap: wrap; /* Ensures that it wraps on smaller screens */
-    gap: 20px; /* Space between the two sections */
-    justify-content: space-between; /* Space between items */
+    gap: 10px; /* Space between the two sections */
+    justify-content: flex-start; /* Space between items */
 }
 
 
 #about {
-    background-color: #ecf0f1;
+    background-color: #cecdcc;
     color: #333;
     flex: 1;
     min-width: 300px; /* Ensure it's responsive */
@@ -53,12 +88,13 @@ h2 {
 }
 
 #contact-info {
-    background-color: #1abc9c;
+    background-color: #d1d415;
     color: white;
 }
 
 /* Navigation Styles */
 nav ul {
+    background-color: #ffffff;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -102,21 +138,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Gallery Styles */
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-}
 
-.gallery-grid img {
-    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
-    max-width: 100%;
-    height: auto;
-    object-fit: scale-down;
-    border-radius: 5px;
-}
 /* Swiper Carousel Styles */
 .swiper-container {
     width: 100%;
