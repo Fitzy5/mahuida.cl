@@ -24,7 +24,7 @@ h2 {
 }
 
 .section {
-    padding: 60px 20px;
+    padding: 20px 20px;
 }
 
 #home {
@@ -35,10 +35,10 @@ h2 {
 }
 
 .page-landing {
-    background-color: #163597;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: nowrap; /* Ensures that it wraps on smaller screens */
-    gap: 1px; /* Space between the two sections */
+    gap: 0px; /* Space between the two sections */
     justify-content: flex-start; /* Space between items */
     width: 100%; /* Adjust the width of the container */
     min-height: 500px;
@@ -50,11 +50,14 @@ h2 {
 .landing-text{
     flex:1;
     padding: 100px;
-    background-color: #64a764;
+    background-color: #163597;
     display: flex;
     justify-content: space-between; /* Aligns horizontally: center, flex-start, flex-end, space-between, etc. */
     align-items: flex-start; /* Aligns vertically: center, flex-start, flex-end, etc. */
     height: 100%; /* Defines the height of the container */
+    border-top-left-radius: 15px; /* Rounded borders */
+
+ 
 
 
 }
@@ -63,36 +66,39 @@ h2 {
     padding: 0; /* Remove any default padding */
     margin: 0; /* Remove any default margin */
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2em;
     font-family:Arial, Helvetica, sans-serif ;
 }
 
 .line1 {
-    font-size: 2em; /* Larger text for the first line */
+    font-size: 2.5em; /* Larger text for the first line */
 }
 
 .line2 {
-    font-size: 1.5em; /* Medium size for the second line */
+    font-size: 1.3em; /* Medium size for the second line */
 }
 
 .line3 {
-    font-size: 1.2em; /* Smaller text for the third line */
+    font-size: 1.3em; /* Smaller text for the third line */
 }
 
 /* Gallery Styles */
 .volante {
     flex:2;
-    background-color: #ffffff;
+    background-color: #163597;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+ 
+
+
 }
 
 .volante img {
     flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
     object-fit: scale-down;
     border-radius: 15px;
@@ -131,7 +137,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content:space-between;
     align-items: center;
     flex-wrap: wrap; /* Ensure responsiveness */
 }
@@ -142,7 +148,7 @@ nav ul li.logo {
 }
 
 nav ul li.logo img {
-    max-width: 320px; /* Adjust the size as needed */
+    max-width: 220px; /* Adjust the size as needed */
     height: auto;
 }
 
@@ -176,12 +182,14 @@ html {
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 40px auto;
-    height: 300px; /* Adjust as needed */
+    margin: 10px auto;
+    
+
   }
   
   .swiper-wrapper {
     display: flex;
+    
   }
   
   .swiper-slide {
@@ -190,12 +198,14 @@ html {
     opacity: 0.7;
     transform: scale(0.6); /* Scale down to 60% */
     transition: transform 0.3s ease, opacity 0.3s ease;
+    
   }
   
   .swiper-slide img {
     width: auto;
     height: 100%;
     max-height: 300px; /* Adjust as needed */
+    
   }
   
   .swiper-slide:hover {
