@@ -1,10 +1,13 @@
 /* General Styles */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     line-height: 1.6;
+    gap: 8px;
 }
 
 h1, h2 {
@@ -32,26 +35,55 @@ h2 {
 }
 
 .page-landing {
-    background-color: #474444;
+    background-color: #163597;
     display: flex;
     flex-wrap: nowrap; /* Ensures that it wraps on smaller screens */
-    gap: 10px; /* Space between the two sections */
+    gap: 1px; /* Space between the two sections */
     justify-content: flex-start; /* Space between items */
     width: 100%; /* Adjust the width of the container */
-    height:500px; /* Allow the height to adjust based on content */
+    min-height: 500px;
+    box-sizing:content-box;
+    padding: 2%;
+
 
 }
 .landing-text{
-    background-color: #10811f;
+    flex:1;
+    padding: 100px;
+    background-color: #64a764;
     display: flex;
     justify-content: space-between; /* Aligns horizontally: center, flex-start, flex-end, space-between, etc. */
     align-items: flex-start; /* Aligns vertically: center, flex-start, flex-end, etc. */
-    height: 200px; /* Defines the height of the container */
+    height: 100%; /* Defines the height of the container */
+
+
+}
+#landing-text ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.line1 {
+    font-size: 2em; /* Larger text for the first line */
+}
+
+.line2 {
+    font-size: 1.5em; /* Medium size for the second line */
+}
+
+.line3 {
+    font-size: 1.2em; /* Smaller text for the third line */
 }
 
 /* Gallery Styles */
 .volante {
-    background-color: #10811f;
+    flex:2;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -60,7 +92,7 @@ h2 {
 
 .volante img {
     flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
-    max-width: 30%;
+    max-width: 50%;
     height: auto;
     object-fit: scale-down;
     border-radius: 15px;
