@@ -122,10 +122,10 @@ nav ul li a:hover {
 
 .volante img {
     flex: 1 1 300px;
-    max-width: 70%;
+    max-width: 75%;
     height: auto;
     object-fit: scale-down;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 /* Content Container and Sections */
