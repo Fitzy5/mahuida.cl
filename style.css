@@ -7,7 +7,6 @@ body {
     padding: 0;
     background-color: #ffffff;
     line-height: 1.6;
-    gap: 8px;
 }
 
 h1, h2 {
@@ -27,97 +26,132 @@ h2 {
     padding: 20px 20px;
 }
 
-#home {
-    background-color: #163597;
-    color: rgb(14, 13, 13);
-    flex: 1;
-    min-width: 300px; /* Ensure it's responsive */
-}
-
-.page-landing {
+/* Navigation Styles */
+nav ul {
     background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: nowrap; /* Ensures that it wraps on smaller screens */
-    gap: 0px; /* Space between the two sections */
-    justify-content: flex-start; /* Space between items */
-    width: 100%; /* Adjust the width of the container */
-    min-height: 500px;
-    box-sizing:content-box;
-    padding: 2%;
-
-
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
-.landing-text{
-    flex:1;
-    padding: 100px;
+
+nav ul li.logo {
+    margin-right: 45%;
+    padding-left: 2%;
+}
+
+nav ul li.logo img {
+    max-width: 220px;
+    height: auto;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #b3b3b3;
+    border-radius: 5px;
+}
+
+/* Page Landing Styles */
+.page-landing {
     background-color: #163597;
     display: flex;
-    justify-content: space-between; /* Aligns horizontally: center, flex-start, flex-end, space-between, etc. */
-    align-items: flex-start; /* Aligns vertically: center, flex-start, flex-end, etc. */
-    height: 100%; /* Defines the height of the container */
-    border-top-left-radius: 15px; /* Rounded borders */
-
- 
-
-
+    flex-wrap: nowrap;
+    gap: 3px;
+    justify-content: flex-start;
+    width: 100%;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    padding: 0%;
+    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    background-size: cover;
 }
+
+.landing-text {
+    flex: 3;
+    padding: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    border-top-left-radius: 0px;
+}
+
 #landing-text ul {
-    list-style-type: none; /* Removes the default bullet points */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Remove any default margin */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 2em;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.4;
+    font-weight: 100;
 }
 
 .line1 {
-    font-size: 2.5em; /* Larger text for the first line */
+    font-size: 2.5em;
 }
 
-.line2 {
-    font-size: 1.3em; /* Medium size for the second line */
+.line2, .line3 {
+    font-size: 1.3em;
 }
 
-.line3 {
-    font-size: 1.3em; /* Smaller text for the third line */
-}
-
-/* Gallery Styles */
 .volante {
-    flex:2;
-    background-color: #163597;
+    flex: 3;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
- 
-
-
 }
 
 .volante img {
-    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 300px;
     max-width: 70%;
     height: auto;
     object-fit: scale-down;
-    border-radius: 15px;
+    border-radius: 50px;
 }
 
-/* Parent container to hold the carousel and about us section */
+/* Content Container and Sections */
 .content-container {
+    background-color: #163597;
     display: flex;
-    flex-wrap: wrap; /* Ensures that it wraps on smaller screens */
-    gap: 10px; /* Space between the two sections */
-    justify-content: flex-start; /* Space between items */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
+#home {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(14, 13, 13);
+    flex: 1;
+    min-width: 300px;
+}
 
 #about {
     background-color: #cecdcc;
     color: #333;
     flex: 1;
-    min-width: 300px; /* Ensure it's responsive */
+    min-width: 300px;
 }
 
 #inscription {
@@ -128,176 +162,6 @@ h2 {
 #contact-info {
     background-color: #d1d415;
     color: white;
-}
-
-/* Navigation Styles */
-nav ul {
-    background-color: #ffffff;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Ensure responsiveness */
-}
-
-/* Style the logo */
-nav ul li.logo {
-    margin-right: auto; /* Pushes the logo to the left */
-}
-
-nav ul li.logo img {
-    max-width: 220px; /* Adjust the size as needed */
-    height: auto;
-}
-
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-}
-
-
-
-nav ul li a:hover {
-    background-color: #b3b3b3;
-    border-radius: 5px;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-/* Swiper Carousel Styles */
-.swiper-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin: 10px auto;
-    
-
-  }
-  
-  .swiper-wrapper {
-    display: flex;
-    
-  }
-  
-  .swiper-slide {
-    flex-shrink: 0;
-    width: auto !important; /* Ensure slides auto-size */
-    opacity: 0.7;
-    transform: scale(0.6); /* Scale down to 60% */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    
-  }
-  
-  .swiper-slide img {
-    width: auto;
-    height: 100%;
-    max-height: 300px; /* Adjust as needed */
-    
-  }
-  
-  .swiper-slide:hover {
-    transform: scale(0.8); /* Enlarge to 80% on hover */
-    opacity: 1;
-  }
-  
-  /* Fade effect on edges */
-  .swiper-container::before,
-  .swiper-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .swiper-container::before {
-    left: 0;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0)
-    );
-  }
-  
-  .swiper-container::after {
-    right: 0;
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0)
-    );
-  }
-  
-
-/* Navigation Buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 16px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 24px;
-    user-select: none;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-/* Dots/Indicators */
-.dots {
-    text-align: center;
-    padding: 20px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fade Animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-}
-
-@keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
 }
 
 /* Form Styles */
@@ -346,6 +210,103 @@ form input[type="submit"]:hover {
     background-color: #3CB371;
 }
 
+/* Swiper Carousel Styles */
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto !important;
+    opacity: 0.7;
+    transform: scale(0.6);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-slide img {
+    width: auto;
+    height: 100%;
+    max-height: 300px;
+}
+
+.swiper-slide:hover {
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+.swiper-container::before,
+.swiper-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+}
+
+.swiper-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(41, 15, 155), rgba(255, 255, 255, 0));
+}
+
+.swiper-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Dots/Indicators */
+.dots {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
 /* Footer Styles */
 footer {
     background-color: #2E8B57;
@@ -361,7 +322,7 @@ footer {
 footer .social-media {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between the links */
+    gap: 15px;
 }
 
 footer .social-media a {
@@ -373,32 +334,12 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
-
 /* Responsive Design */
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-form label, form input, form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-
-
 @media (max-width: 768px) {
-    
     .content-container {
         flex-direction: column;
     }
-    
+
     nav ul {
         flex-direction: column;
     }
@@ -414,11 +355,6 @@ form label, form input, form textarea {
 
     .gallery-grid img {
         width: 45%;
-    }
-
-    /* Adjust carousel images for smaller screens */
-    .slide img {
-        width: 100%;
     }
 
     .prev, .next {
