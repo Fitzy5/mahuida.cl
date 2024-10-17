@@ -2,12 +2,12 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d33737;
+    background-color: #ffffff;
     line-height: 1.6;
-    max-width:fit-content;
+    
     
 }
 
@@ -30,7 +30,7 @@ h2 {
 
 /* Navigation Styles */
 nav ul {
-    background-color: #a35656;
+    background-color: #ffffff;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -40,7 +40,6 @@ nav ul {
     flex-wrap: wrap;
     flex-grow: 1;
     flex-shrink: 1;
-    
 }
 
 nav ul li.logo {
@@ -78,7 +77,7 @@ nav ul li a:hover {
     justify-content: flex-start;
     width: 100%;
     background-repeat: no-repeat;
-    box-sizing: content-box;
+    box-sizing:content-box;
     padding: 0%;
     background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
     background-size: cover;
@@ -131,32 +130,9 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* Content Container and Sections */
-.content-container {
-    background-color: #163597;
-    display: flex;
-    flex-wrap:wrap;
-    gap: 10px;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 3%;
-    margin-left: 20%;
-    margin-right: 20%;
 
 
- 
-}
-
-#home {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(14, 13, 13);
-    max-width: 80%;
-   
-    
-}
-
-
+/* Inscription and Contact Sections */
 #inscription {
     display: flex;
     background-color: #3498db;
@@ -214,101 +190,138 @@ form input[type="submit"]:hover {
     background-color: #3CB371;
 }
 
-/* Swiper Carousel Styles */
-.swiper-container {
+
+
+/* Thumbnails */
+.thumbs {
     
-    overflow: hidden;
-    position: relative;
-    margin: 10px auto;
-}
-
-.swiper-wrapper {
+    background-color: #163597;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width:max-content;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
-.swiper-slide {
-    flex-shrink: 0;
-    width: auto !important;
-    opacity: 0.7;
-    transform: scale(0.6);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.thumbs > a {
+    max-width: 150px;
+    height: 150px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.swiper-slide img {
-    width: auto;
+.thumbs > a img {
+    width: 100%;
     height: 100%;
-    max-height: 300px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out;
+    filter: grayscale(50%);
 }
 
-.swiper-slide:hover {
-    transform: scale(0.8);
-    opacity: 1;
+.thumbs > a:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
 }
 
-.swiper-container::before,
-.swiper-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    z-index: 1;
-}
 
-.swiper-container::before {
+
+
+/* Lightbox Modal Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000; /* Ensure it's above other elements */
+    padding-top: 60px;
     left: 0;
-    background: linear-gradient(to right, rgb(41, 15, 155), rgba(255, 255, 255, 0));
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
 }
 
-.swiper-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+/* Lightbox Content (Image) */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-/* Navigation Buttons */
-.prev, .next {
+/* Close Button */
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.lightbox .close:hover,
+.lightbox .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Next & Previous Buttons */
+.lightbox .prev,
+.lightbox .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: auto;
     padding: 16px;
-    color: #ffffff;
+    color: #f1f1f1;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 40px;
+    transition: color 0.3s;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-    text-decoration: none;
+    border-radius: 0 3px 3px 0;
 }
 
-.prev {
-    left: 0;
+.lightbox .prev {
+    left: 20px;
+    border-radius: 3px 0 0 3px;
 }
 
-.next {
-    right: 0;
+.lightbox .next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
 }
 
-/* Dots/Indicators */
-.dots {
-    text-align: center;
-    padding: 20px;
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: #bbb;
 }
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
+/* Responsive Adjustments */
+@media only screen and (max-width: 700px){
+    .lightbox-content {
+        width: 100%;
+    }
+    
+    .lightbox .prev,
+    .lightbox .next {
+        font-size: 30px;
+        padding: 10px;
+    }
 
-.active, .dot:hover {
-    background-color: #717171;
+    .lightbox .close {
+        font-size: 30px;
+        top: 15px;
+        right: 25px;
+    }
 }
 
 /* Footer Styles */
@@ -337,44 +350,3 @@ footer .social-media a {
 footer .social-media a:hover {
     text-decoration: underline;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        padding: 10px;
-        border-bottom: 1px solid #3CB371;
-    }
-
-    .gallery-grid img {
-        width: 45%;
-    }
-
-    .prev, .next {
-        font-size: 18px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-grid img {
-        width: 90%;
-    }
-
-    .prev, .next {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-

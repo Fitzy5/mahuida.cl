@@ -56,46 +56,69 @@
 
     </section>    
 
-    <section id="content-container" class="content-container">      
+    
         
-        <div id="home" class="section">
-            <h1>GALERIA</h1>
 
 
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="work1.jpg" alt="Trabajo 1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="work2.jpg" alt="Trabajo 2" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="work3.jpg" alt="Trabajo 3" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="work4.jpg" alt="Trabajo 4" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="work5.jpg" alt="Trabajo 5" />
-                    </div>
-                </div>
+    <!-- New Pure CSS Lightbox Gallery -->
+    <div class="thumbs">
+        <a href="#" data-src="work1.jpg" data-index="0"><img src="work1.jpg" alt="Trabajo 1"></a>
+        <a href="#" data-src="work2.jpg" data-index="1"><img src="work2.jpg" alt="Trabajo 2"></a>
+        <a href="#" data-src="work3.jpg" data-index="2"><img src="work3.jpg" alt="Trabajo 3"></a>
+        <a href="#" data-src="work4.jpg" data-index="3"><img src="work4.jpg" alt="Trabajo 4"></a>
+        <a href="#" data-src="work5.jpg" data-index="4"><img src="work5.jpg" alt="Trabajo 5"></a>
+    </div>
+  
+
+    <div class="lightbox">
+        <div class="target" id="target1">
+            <a href="#!" class="close nav"><i class="fas fa-times"></i></a>
+            <a href="#target5" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
+            <div class="content">
+                <img src="work1.jpg" alt="Trabajo 1">
             </div>
+            <a href="#target2" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
         </div>
-
-
-        <div id="about" class="section"> <!-- About Us Section -->
-            <h2>Sobre Nosotros</h2>
-            <p id="about-splash-text">Inscribe tu casa para la aislación térmica</p>
+        <div class="target" id="target2">
+            <a href="#target1" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
+            <div class="content">
+                <img src="work2.jpg" alt="Trabajo 2">
+            </div>
+            <a href="#target3" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
         </div>
+        <div class="target" id="target3">
+            <a href="#target2" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
+            <div class="content">
+                <img src="work3.jpg" alt="Trabajo 3">
+            </div>
+            <a href="#target4" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
+        </div>
+        <div class="target" id="target4">
+            <a href="#target3" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
+            <div class="content">
+                <img src="work4.jpg" alt="Trabajo 4">
+            </div>
+            <a href="#target5" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
+        </div>
+        <div class="target" id="target5">
+            <a href="#target4" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
+            <div class="content">
+                <img src="work5.jpg" alt="Trabajo 5">
+            </div>
+            <a href="#target1" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
+        </div>
+    </div>
+    
 
- 
+
+    <div id="about" class="section"> <!-- About Us Section -->
+        <h2>Sobre Nosotros</h2>
+        <p id="about-splash-text">Inscribe tu casa para la aislación térmica</p>
+    </div>
 
 
-        
-    </section>
+
+
     
     <!-- Inscription Form Section -->
     <section id="inscription" class="section">
@@ -145,27 +168,93 @@
         </div>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- JavaScript Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Lightbox Image">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-            centeredSlides: true,
-            loop: true,
-            speed: 5000, // Duration of the animation in milliseconds
-            autoplay: {
-                delay: 0, // Delay between transitions (0 for continuous scrolling)
-                disableOnInteraction: false,
-            },
-            freeMode: true,
-            freeModeMomentum: false,
-            allowTouchMove: false, // Disable user interaction for continuous scrolling
-            simulateTouch: false,
+<!-- JavaScript Lightbox Functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox .close');
+        const prevBtn = document.querySelector('.lightbox .prev');
+        const nextBtn = document.querySelector('.lightbox .next');
+        const thumbnails = document.querySelectorAll('.thumbs a');
+        let currentIndex = 0;
+
+        // Array of image sources
+        const images = Array.from(thumbnails).map(thumbnail => thumbnail.getAttribute('data-src'));
+
+        // Function to open lightbox
+        function openLightbox(index) {
+            currentIndex = index;
+            lightbox.style.display = 'block';
+            lightboxImg.src = images[currentIndex];
+            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Function to close lightbox
+        function closeLightboxFunc() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Function to show next image
+        function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex];
+            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
+        }
+
+        // Function to show previous image
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex];
+            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
+        }
+
+        // Add click event to thumbnails
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function(e) {
+                e.preventDefault();
+                openLightbox(index);
+            });
         });
-    </script>
+
+        // Add click event to close button
+        closeBtn.addEventListener('click', closeLightboxFunc);
+
+        // Add click events to navigation buttons
+        nextBtn.addEventListener('click', showNext);
+        prevBtn.addEventListener('click', showPrev);
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightboxFunc();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (lightbox.style.display === 'block') {
+                if (e.key === 'Escape') {
+                    closeLightboxFunc();
+                } else if (e.key === 'ArrowRight') {
+                    showNext();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrev();
+                }
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
