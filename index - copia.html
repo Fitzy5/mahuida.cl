@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructora Mahuida - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSSSSSSSSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <meta name="description" content="Constructora Mahuida ofrece servicios de aislamiento de alta calidad para hogares cómodos y eficientes en Santiago, Chile.">
+    <meta name="keywords" content="Constructora Mahuida, aislamiento térmico, eficiencia energética, Santiago, Chile">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Constructora Mahuida - Aislamiento de Calidad">
+    <meta property="og:description" content="Ofrecemos soluciones de aislamiento para hogares cómodos y eficientes.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.mahuida.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li class="logo">
+                <img src="LOGO MAHUIDA-tra LB.png" alt="logo mahuida" />
+            </li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#inscription">Inscripción</a></li>
+            <li><a href="#contact-info">Contacto</a></li>
+        </ul>
+    </nav>
+   
+    <section id="page-landing" class="page-landing">
+        
+        <div id="landing-text" class="landing-text">
+            <ul>
+                <li class="line1">SUBSIDIOS</li>
+                <li class="line2">MEJORAMIENTO TÉRMICO</li>
+                <li class="line3">TEMUCO Y PADRE LAS CASAS</li>
+            </ul>
+        </div>
+
+        <div class="volante">
+           
+            <img src="volante.png" alt="Proyecto 1">
+        </div>
+
+
+
+
+
+    </section>    
+
+    <section id="content-container" class="content-container">      
+        
+        <div id="home" class="section">
+            <h1>GALERIA</h1>
+
+
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="work1.jpg" alt="Trabajo 1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work2.jpg" alt="Trabajo 2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work3.jpg" alt="Trabajo 3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work4.jpg" alt="Trabajo 4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="work5.jpg" alt="Trabajo 5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="about" class="section"> <!-- About Us Section -->
+            <h2>Sobre Nosotros</h2>
+            <p id="about-splash-text">Inscribe tu casa para la aislación térmica</p>
+        </div>
+
+ 
+
+
+        
+    </section>
+    
+    <!-- Inscription Form Section -->
+    <section id="inscription" class="section">
+        <h2>Formulario de Inscripción</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="contact-info" class="section">
+        <h2>Contacto</h2>
+        <p>Email: info@mahuida.com</p>
+        <p>Teléfono: +56 9 1234 5678</p>
+        <p>Dirección: Santiago, Chile</p>
+
+        <!-- Google Maps Embed -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12...your-map-embed-code"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Constructora Mahuida. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/constructoramahuida" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/constructoramahuida" target="_blank">Instagram</a> |
+            <a href="https://www.twitter.com/mahuida" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            centeredSlides: true,
+            loop: true,
+            speed: 5000, // Duration of the animation in milliseconds
+            autoplay: {
+                delay: 0, // Delay between transitions (0 for continuous scrolling)
+                disableOnInteraction: false,
+            },
+            freeMode: true,
+            freeModeMomentum: false,
+            allowTouchMove: false, // Disable user interaction for continuous scrolling
+            simulateTouch: false,
+        });
+    </script>
+
+</body>
+</html>

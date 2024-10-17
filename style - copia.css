@@ -1,0 +1,388 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d33737;
+    line-height: 1.6;
+    max-width:fit-content;
+    
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.section {
+    padding: 20px 20px;
+}
+
+/* Navigation Styles */
+nav ul {
+    background-color: #a35656;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+}
+
+nav ul li.logo {
+    margin-right: 45%;
+    padding-left: 2%;
+}
+
+nav ul li.logo img {
+    max-width: 220px;
+    height: auto;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #b3b3b3;
+    border-radius: 5px;
+}
+
+/* Page Landing Styles */
+.page-landing {
+    background-color: #163597;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3px;
+    justify-content: flex-start;
+    width: 100%;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    padding: 0%;
+    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    background-size: cover;
+}
+
+.landing-text {
+    flex: 3;
+    padding: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    border-top-left-radius: 0px;
+}
+
+#landing-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.4;
+    font-weight: 100;
+}
+
+.line1 {
+    font-size: 2.5em;
+}
+
+.line2, .line3 {
+    font-size: 1.3em;
+}
+
+.volante {
+    flex: 3;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.volante img {
+    flex: 1 1 300px;
+    max-width: 75%;
+    height: auto;
+    object-fit: scale-down;
+    border-radius: 10px;
+}
+
+/* Content Container and Sections */
+.content-container {
+    background-color: #163597;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+
+ 
+}
+
+#home {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(14, 13, 13);
+    max-width: 80%;
+   
+    
+}
+
+#about {
+    display: flex;
+    background-color: #cecdcc;
+    color: #333;
+    max-width: 80%;
+    
+    
+ 
+}
+
+#inscription {
+    display: flex;
+    background-color: #3498db;
+    color: white;
+}
+
+#contact-info {
+    background-color: #d1d415;
+    color: white;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #2E8B57;
+    color: #FFF;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1em;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3CB371;
+}
+
+/* Swiper Carousel Styles */
+.swiper-container {
+    
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto !important;
+    opacity: 0.7;
+    transform: scale(0.6);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-slide img {
+    width: auto;
+    height: 100%;
+    max-height: 300px;
+}
+
+.swiper-slide:hover {
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+.swiper-container::before,
+.swiper-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+}
+
+.swiper-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(41, 15, 155), rgba(255, 255, 255, 0));
+}
+
+.swiper-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Dots/Indicators */
+.dots {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2E8B57;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-media a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        border-bottom: 1px solid #3CB371;
+    }
+
+    .gallery-grid img {
+        width: 45%;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid img {
+        width: 90%;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
