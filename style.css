@@ -1,7 +1,25 @@
 /* General Styles */
 
+
+.smooth-scroll {
+position: relative;
+min-height: 100vh;
+overflow: hidden;
+}
+
+.smooth-scroll {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+
+
+.smooth-scroll::-webkit-scrollbar {
+display: none;
+}
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 body {
     display: flex;
@@ -11,9 +29,27 @@ body {
     padding: 0;
     background-color: #ffffff;
     line-height: 1.6;
+    overflow: hidden;
    
     
     
+}
+
+.side-by-side-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#about {
+    flex: 1;
+    background-color: #163597;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1, h2 {
@@ -75,7 +111,7 @@ nav ul li a:hover {
 
 /* Page Landing Styles */
 .page-landing {
-    background-color: #163597;
+    background-color: #1633a5;
     display: flex;
     flex-wrap: nowrap;
     gap: 3px;
@@ -142,6 +178,7 @@ nav ul li a:hover {
     display: flex;
     background-color: #3498db;
     color: white;
+    min-height: 100vh;
 }
 
 #contact-info {
@@ -199,26 +236,38 @@ form input[type="submit"]:hover {
 
 /* Thumbnails */
 .thumbs {
-    
-    background-color: #163597;
+    flex: 1;
+    padding: 20px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    max-width:max-content;
-    margin: 0 auto;
-    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #163597;
 }
 
+
 .thumbs > a {
+    flex: 0 0 calc(33.33% - 20px); /* Makes 3 thumbnails per row */
     max-width: 150px;
     height: 150px;
-    margin: 10px;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+#about, .thumbs {
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .side-by-side-container {
+        flex-direction: column;
+    }
+    
+    #about, .thumbs {
+        min-height: 50vh;
+    }
+}
+
+
 
 .thumbs > a img {
     width: 100%;
