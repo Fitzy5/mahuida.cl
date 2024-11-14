@@ -33,7 +33,6 @@ ScrollTrigger.scrollerProxy(".smooth-scroll", {
   pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
 });
 
-// Set up animations for your sections
 function setupAnimations() {
   // Landing page animation
   gsap.from("#landing-text ul", {
@@ -63,31 +62,32 @@ function setupAnimations() {
     duration: 1
   });
 
-  // Thumbs gallery animation
-  gsap.from(".thumbs a", {
-    scrollTrigger: {
-      trigger: ".thumbs",
-      scroller: ".smooth-scroll",
-      start: "top 80%",
-      end: "top 20%",
-      scrub: 1
-    },
-    y: 50,
-    opacity: 0,
-    stagger: 0.2
-  });
-
   // About section animation
   gsap.from("#about", {
     scrollTrigger: {
       trigger: "#about",
       scroller: ".smooth-scroll",
-      start: "top 80%",
-      end: "top 20%",
-      scrub: 1
+      start: "top bottom",
+      end: "top center",
+      toggleActions: "play none none reverse"
     },
-    y: 50,
-    opacity: 0
+    y: 100,
+    opacity: 0,
+    duration: 1
+  });
+
+  // Thumbs container animation
+  gsap.from(".thumbs", {
+    scrollTrigger: {
+      trigger: ".thumbs",
+      scroller: ".smooth-scroll",
+      start: "top bottom",
+      end: "top center",
+      toggleActions: "play none none reverse"
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1
   });
 
   // Form section animation
