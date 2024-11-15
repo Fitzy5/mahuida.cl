@@ -1,75 +1,41 @@
-/* General Styles */
-
-
-.smooth-scroll {
-position: relative;
-min-height: 100vh;
-overflow: hidden;
-}
-
-.smooth-scroll {
--ms-overflow-style: none;
-scrollbar-width: none;
-}
-
-
-
-.smooth-scroll::-webkit-scrollbar {
-display: none;
-}
-
+/* Reset and Base Styles */
 html {
-    scroll-behavior: auto;
-  }
+    scroll-padding-top: 80px;
+    scroll-snap-type: y proximity ;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+main {
+    padding-top: 20px; /* Same as scroll-padding-top */
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    overflow: hidden;
-   
-    
-    
+    overflow-x: hidden;
 }
 
-.side-by-side-container {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-}
-
-#about {
-    flex: 1;
-    background-color: #163597;
-    padding: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Typography */
 h1, h2 {
     text-align: center;
     color: #ffffff;
 }
 
-h1 {
-    font-size: 2.5em;
-}
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
 
-h2 {
-    font-size: 2em;
-}
+/* Navigation */
 
-.section {
-    padding: 20px 20px;
+/* Navigation styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
 }
-
-/* Navigation Styles */
 nav ul {
     background-color: #ffffff;
     list-style-type: none;
@@ -79,8 +45,6 @@ nav ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
 
 nav ul li.logo {
@@ -91,10 +55,6 @@ nav ul li.logo {
 nav ul li.logo img {
     max-width: 220px;
     height: auto;
-}
-
-nav ul li {
-    margin: 0 0px;
 }
 
 nav ul li a {
@@ -109,30 +69,33 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Page Landing Styles */
+/* Section Styles */
+.section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Landing Page */
 .page-landing {
     background-color: #1633a5;
     display: flex;
-    flex-wrap: nowrap;
-    gap: 3px;
-    justify-content: flex-start;
-    width: 100%;
-    background-repeat: no-repeat;
-    box-sizing:content-box;
-    padding: 0%;
     background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    padding-top: 10%;
 }
 
 .landing-text {
     flex: 3;
     padding: 150px;
-    background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100%;
-    border-top-left-radius: 0px;
 }
 
 #landing-text ul {
@@ -142,51 +105,76 @@ nav ul li a:hover {
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 2em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, sans-serif;
     line-height: 1.4;
-    font-weight: 100;
-}
-
-.line1 {
-    font-size: 2.5em;
-}
-
-.line2, .line3 {
-    font-size: 1.3em;
 }
 
 .volante {
     flex: 3;
-    background-color: rgba(255, 255, 255, 0);
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .volante img {
-    flex: 1 1 300px;
     max-width: 75%;
     height: auto;
-    object-fit: scale-down;
     border-radius: 10px;
 }
 
-
-
-/* Inscription and Contact Sections */
-#inscription {
+/* About and Thumbs Section */
+.side-by-side-container {
     display: flex;
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+#about {
+    flex: 1;
+    background-color: #163597;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Thumbnails */
+.thumbs {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #163597;
+}
+
+.thumbs > a {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: 150px;
+    height: 150px;
+}
+
+.thumbs > a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out;
+    filter: grayscale(50%);
+}
+
+.thumbs > a:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Form Section */
+#inscription {
     background-color: #3498db;
     color: white;
-    min-height: 100vh;
 }
 
-#contact-info {
-    background-color: #d1d415;
-    color: white;
-}
-
-/* Form Styles */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -212,10 +200,6 @@ form textarea {
     font-size: 1em;
 }
 
-form textarea {
-    resize: vertical;
-}
-
 form input[type="submit"] {
     background-color: #2E8B57;
     color: #FFF;
@@ -232,153 +216,13 @@ form input[type="submit"]:hover {
     background-color: #3CB371;
 }
 
-
-
-/* Thumbnails */
-.thumbs {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: #163597;
+/* Contact Section */
+#contact-info {
+    background-color: #d1d415;
+    color: white;
 }
 
-
-.thumbs > a {
-    flex: 0 0 calc(33.33% - 20px); /* Makes 3 thumbnails per row */
-    max-width: 150px;
-    height: 150px;
-}
-
-#about, .thumbs {
-    min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-    .side-by-side-container {
-        flex-direction: column;
-    }
-    
-    #about, .thumbs {
-        min-height: 50vh;
-    }
-}
-
-
-
-.thumbs > a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out;
-    filter: grayscale(50%);
-}
-
-.thumbs > a:hover img {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-}
-
-
-
-
-/* Lightbox Modal Styles */
-.lightbox {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 2000; /* Ensure it's above other elements */
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
-}
-
-/* Lightbox Content (Image) */
-.lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-/* Close Button */
-.lightbox .close {
-    position: absolute;
-    top: 30px;
-    right: 45px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-.lightbox .close:hover,
-.lightbox .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Next & Previous Buttons */
-.lightbox .prev,
-.lightbox .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: #f1f1f1;
-    font-weight: bold;
-    font-size: 40px;
-    transition: color 0.3s;
-    user-select: none;
-    border-radius: 0 3px 3px 0;
-}
-
-.lightbox .prev {
-    left: 20px;
-    border-radius: 3px 0 0 3px;
-}
-
-.lightbox .next {
-    right: 20px;
-    border-radius: 3px 0 0 3px;
-}
-
-.lightbox .prev:hover,
-.lightbox .next:hover {
-    color: #bbb;
-}
-
-/* Responsive Adjustments */
-@media only screen and (max-width: 700px){
-    .lightbox-content {
-        width: 100%;
-    }
-    
-    .lightbox .prev,
-    .lightbox .next {
-        font-size: 30px;
-        padding: 10px;
-    }
-
-    .lightbox .close {
-        font-size: 30px;
-        top: 15px;
-        right: 25px;
-    }
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #2E8B57;
     color: #FFFFFF;
@@ -390,17 +234,45 @@ footer {
     flex-direction: column;
 }
 
-footer .social-media {
+.social-media {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-footer .social-media a {
+.social-media a {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-footer .social-media a:hover {
+.social-media a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .side-by-side-container {
+        flex-direction: column;
+    }
+    
+    #about, .thumbs {
+        min-height: 50vh;
+    }
+    
+    .page-landing {
+        flex-direction: column;
+    }
+    
+    .landing-text {
+        padding: 50px;
+    }
+    
+    nav ul li.logo {
+        margin-right: 0;
+        padding-left: 0;
+    }
+    
+    .thumbs > a {
+        flex: 0 0 calc(50% - 20px);
+    }
 }

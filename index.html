@@ -1,262 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructora Mahuida - Inicio</title>
+    <title>Constructora Mahuida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
-
-    <meta name="description" content="Constructora Mahuida ofrece servicios de aislamiento de alta calidad para hogares cómodos y eficientes en Santiago, Chile.">
-    <meta name="keywords" content="Constructora Mahuida, aislamiento térmico, eficiencia energética, Santiago, Chile">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Constructora Mahuida - Aislamiento de Calidad">
-    <meta property="og:description" content="Ofrecemos soluciones de aislamiento para hogares cómodos y eficientes.">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://www.mahuida.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-    <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li class="logo">
-                <img src="LOGO MAHUIDA-tra LB.png" alt="logo mahuida" />
-            </li>
+            <li class="logo"><img src="LOGO MAHUIDA-tra LB.png" alt="logo mahuida"></li>
             <li><a href="#home">Inicio</a></li>
             <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#inscription">Inscripción</a></li>
             <li><a href="#contact-info">Contacto</a></li>
         </ul>
     </nav>
-   
 
-<div class="smooth-scroll" id="main-content">
-    
-        <section id="page-landing" class="page-landing">
-            
-            <div id="landing-text" class="landing-text">
+    <main>
+        <section id="home" class="section page-landing">
+            <div class="landing-text">
                 <ul>
-                    <li class="line1">SUBSIDIOS</li>
-                    <li class="line2">MEJORAMIENTO TÉRMICO</li>
-                    <li class="line3">TEMUCO Y PADRE LAS CASAS</li>
+                    <li>SUBSIDIOS</li>
+                    <li>MEJORAMIENTO TÉRMICO</li>
+                    <li>TEMUCO Y PADRE LAS CASAS</li>
                 </ul>
             </div>
-
             <div class="volante">
-            
                 <img src="volante.png" alt="Proyecto 1">
             </div>
-
-
-
-
-
-        </section>    
+        </section>
 
         <div class="side-by-side-container">
-            <div id="about" class="section">
+            <section id="about" class="section">
                 <h2>Sobre Nosotros</h2>
-                <p id="about-splash-text">Inscribe tu casa para la aislación térmica</p>
-            </div>
-        
-            <div class="thumbs">
-                <a href="#" data-src="work1.jpg" data-index="0"><img src="work1.jpg" alt="Trabajo 1"></a>
-                <a href="#" data-src="work2.jpg" data-index="1"><img src="work2.jpg" alt="Trabajo 2"></a>
-                <a href="#" data-src="work3.jpg" data-index="2"><img src="work3.jpg" alt="Trabajo 3"></a>
-                <a href="#" data-src="work4.jpg" data-index="3"><img src="work4.jpg" alt="Trabajo 4"></a>
-                <a href="#" data-src="work5.jpg" data-index="4"><img src="work5.jpg" alt="Trabajo 5"></a>
-            </div>
-        </div>
-    
-        <div class="lightbox">
-            <div class="target" id="target1">
-                <a href="#!" class="close nav"><i class="fas fa-times"></i></a>
-                <a href="#target5" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
-                <div class="content">
-                    <img src="work1.jpg" alt="Trabajo 1">
-                </div>
-                <a href="#target2" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
-            </div>
-            <div class="target" id="target2">
-                <a href="#target1" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
-                <div class="content">
-                    <img src="work2.jpg" alt="Trabajo 2">
-                </div>
-                <a href="#target3" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
-            </div>
-            <div class="target" id="target3">
-                <a href="#target2" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
-                <div class="content">
-                    <img src="work3.jpg" alt="Trabajo 3">
-                </div>
-                <a href="#target4" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
-            </div>
-            <div class="target" id="target4">
-                <a href="#target3" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
-                <div class="content">
-                    <img src="work4.jpg" alt="Trabajo 4">
-                </div>
-                <a href="#target5" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
-            </div>
-            <div class="target" id="target5">
-                <a href="#target4" class="fas fa-chevron-left lightbox-nav" title="Anterior"></a>
-                <div class="content">
-                    <img src="work5.jpg" alt="Trabajo 5">
-                </div>
-                <a href="#target1" class="fas fa-chevron-right lightbox-nav" title="Siguiente"></a>
-            </div>
-        </div>
-        
+                <p>Inscribe tu casa para la aislación térmica</p>
+            </section>
 
-        
-        <!-- Inscription Form Section -->
+            <div class="thumbs">
+                <a href="#" data-src="work1.jpg"><img src="work1.jpg" alt="Trabajo 1"></a>
+                <a href="#" data-src="work2.jpg"><img src="work2.jpg" alt="Trabajo 2"></a>
+                <a href="#" data-src="work3.jpg"><img src="work3.jpg" alt="Trabajo 3"></a>
+                <a href="#" data-src="work4.jpg"><img src="work4.jpg" alt="Trabajo 4"></a>
+                <a href="#" data-src="work5.jpg"><img src="work5.jpg" alt="Trabajo 5"></a>
+            </div>
+        </div>
+
         <section id="inscription" class="section">
             <h2>Formulario de Inscripción</h2>
             <form action="submit_form.php" method="POST">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
                 <input type="submit" value="Enviar">
             </form>
         </section>
 
-        <!-- Contact Info Section -->
         <section id="contact-info" class="section">
             <h2>Contacto</h2>
             <p>Email: info@mahuida.com</p>
             <p>Teléfono: +56 9 1234 5678</p>
             <p>Dirección: Santiago, Chile</p>
-
-            <!-- Google Maps Embed -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12...your-map-embed-code"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
         </section>
+    </main>
 
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2023 Constructora Mahuida. Todos los derechos reservados.</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/constructoramahuida" target="_blank">Facebook</a> |
-                <a href="https://www.instagram.com/constructoramahuida" target="_blank">Instagram</a> |
-                <a href="https://www.twitter.com/mahuida" target="_blank">Twitter</a>
-            </div>
-        </footer>
+    <footer>
+        <p>© 2023 Constructora Mahuida. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/constructoramahuida" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/constructoramahuida" target="_blank">Instagram</a> |
+            <a href="https://www.twitter.com/mahuida" target="_blank">Twitter</a>
+        </div>
+    </footer>
 
-    <!-- JavaScript Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Lightbox Image">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-    </div>
-</div>
-
-
-<!-- JavaScript Lightbox Functionality -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.querySelector('.lightbox .close');
-        const prevBtn = document.querySelector('.lightbox .prev');
-        const nextBtn = document.querySelector('.lightbox .next');
-        const thumbnails = document.querySelectorAll('.thumbs a');
-        let currentIndex = 0;
-
-        // Array of image sources
-        const images = Array.from(thumbnails).map(thumbnail => thumbnail.getAttribute('data-src'));
-
-        // Function to open lightbox
-        function openLightbox(index) {
-            currentIndex = index;
-            lightbox.style.display = 'block';
-            lightboxImg.src = images[currentIndex];
-            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        // Function to close lightbox
-        function closeLightboxFunc() {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-        }
-
-        // Function to show next image
-        function showNext() {
-            currentIndex = (currentIndex + 1) % images.length;
-            lightboxImg.src = images[currentIndex];
-            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
-        }
-
-        // Function to show previous image
-        function showPrev() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            lightboxImg.src = images[currentIndex];
-            lightboxImg.alt = `Trabajo ${currentIndex + 1}`;
-        }
-
-        // Add click event to thumbnails
-        thumbnails.forEach((thumbnail, index) => {
-            thumbnail.addEventListener('click', function(e) {
-                e.preventDefault();
-                openLightbox(index);
-            });
-        });
-
-        // Add click event to close button
-        closeBtn.addEventListener('click', closeLightboxFunc);
-
-        // Add click events to navigation buttons
-        nextBtn.addEventListener('click', showNext);
-        prevBtn.addEventListener('click', showPrev);
-
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                closeLightboxFunc();
-            }
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (lightbox.style.display === 'block') {
-                if (e.key === 'Escape') {
-                    closeLightboxFunc();
-                } else if (e.key === 'ArrowRight') {
-                    showNext();
-                } else if (e.key === 'ArrowLeft') {
-                    showPrev();
-                }
-            }
-        });
-    });
-</script>
-<script src="scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scroll.js"></script>
 </body>
 </html>
