@@ -1,7 +1,7 @@
 /* Reset and Base Styles */
 html {
     scroll-padding-top: 80px;
-    scroll-snap-type: y proximity ;
+    scroll-snap-type: y mandatory ;
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -108,17 +108,44 @@ nav ul li a:hover {
     font-family: Impact, sans-serif;
     line-height: 1.4;
 }
-
-.volante {
-    flex: 3;
+.requisitos{
+    
     display: flex;
-    justify-content: center;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+
 }
 
-.volante img {
-    max-width: 75%;
+#text-requisitos {
+    flex: 1;
+    background-color: #163597;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+#volante {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    box-sizing: border-box; /* Add this */
+    padding: 2rem;
+ 
+    
+}
+
+
+
+#volante img {
+
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block; /* Add this */
 }
 
 /* About and Thumbs Section */
