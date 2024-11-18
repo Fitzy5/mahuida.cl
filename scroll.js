@@ -84,17 +84,8 @@ gsap.from("#landing-text ul", {
     duration: 1
 });
 
-gsap.from(".volante img", {
-    scrollTrigger: {
-        trigger: ".volante",
-        start: "top 80%",
-        end: "top 20%",
-        scrub: 1
-    },
-    scale: 0.8,
-    opacity: 0,
-    duration: 1
-});
+
+
 
 gsap.from(".thumbs", {
   scrollTrigger: {
@@ -121,3 +112,27 @@ gsap.from(".thumbs a", {
   stagger: 0.5
 });
 
+gsap.from("#volante", {
+    scrollTrigger: {
+      trigger: "#volante",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+    },
+    y: 50,
+    opacity: 1,
+    duration: 1
+  });
+  
+
+  gsap.from("#volante img", {
+    scrollTrigger: {
+        trigger: "#volante",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+    },
+    scale: 0.8,
+    opacity: 1,
+    duration: 1.2
+});

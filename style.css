@@ -1,6 +1,6 @@
 /* Reset and Base Styles */
 html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 50px;
     scroll-snap-type: y mandatory ;
     scroll-behavior: smooth;
     height: 100%;
@@ -35,6 +35,7 @@ nav {
     width: 100%;
     z-index: 1000;
     background: white;
+    
 }
 nav ul {
     background-color: #ffffff;
@@ -53,14 +54,14 @@ nav ul li.logo {
 }
 
 nav ul li.logo img {
-    max-width: 220px;
+    max-width: 180px;
     height: auto;
 }
 
 nav ul li a {
     color: #000000;
     text-decoration: none;
-    padding: 15px;
+    padding: 8px 15px;
     display: block;
 }
 
@@ -98,52 +99,103 @@ nav ul li a:hover {
     align-items: flex-start;
 }
 
-#landing-text ul {
+.landing-text ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 2em;
-    font-family: Impact, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.4;
+    margin-left: -100px;  /* Moves text left */
+    letter-spacing: -4px; /* Reduces space between characters */
 }
+
+.landing-text ul li:first-child {
+    font-size: 1.6em;  /* Makes first item 40% larger */
+    margin-bottom: 5px; /* Adds some space after */
+}
+
 .requisitos{
     
     display: flex;
     min-height: 100vh;
     scroll-snap-align: start;
-    align-items: center;
 
 }
 
 #text-requisitos {
-    flex: 1;
-    background-color: #163597;
+    
+    
     color: white;
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
     justify-content: center;
-    align-items: center;
+    background-color: #163597;
    
 }
+
+#text-requisitos ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#text-requisitos li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+#text-requisitos li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#text-requisitos ol {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    padding-left: 30px;
+}
+
+
+#text-requisitos h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#text-requisitos li {
+    margin-bottom: 120px;
+}
+
 #volante {
+   
     flex: 1;
+    padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
-    box-sizing: border-box; /* Add this */
-    padding: 2rem;
- 
+    background-color: #163597;
     
 }
 
 
-
 #volante img {
-
-    width: 100%;
+    max-width: 650px;
     height: auto;
     display: block; /* Add this */
 }
@@ -163,6 +215,16 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Thumbnails */
@@ -173,7 +235,6 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
     background-color: #163597;
 }
 
@@ -301,5 +362,20 @@ footer {
     
     .thumbs > a {
         flex: 0 0 calc(50% - 20px);
+    }
+
+    #landing-text ul {
+        font-size: 2em;
+    }
+    
+    #text-requisitos h2,
+    #about h2,
+    #contact-info h2 {
+        font-size: 2em;
+    }
+    
+    #text-requisitos ol,
+    #contact-info p {
+        font-size: 1.1em;
     }
 }
