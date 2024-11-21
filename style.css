@@ -70,6 +70,25 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.nav-buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.nav-button {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 /* Section Styles */
 .section {
     scroll-snap-align: start;
@@ -230,6 +249,7 @@ nav ul li a:hover {
 /* Thumbnails */
 .thumbs {
     flex: 1;
+    position: relative;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -244,12 +264,36 @@ nav ul li a:hover {
     height: 150px;
 }
 
+.thumbs > a.expanded {
+    position: absolute;
+    left: 20%;
+    right: 10%;
+    top: 10%;
+    transform: translate(-50%, -30%);
+    max-width: 100%;
+    z-index: 100;
+}
+.thumbs > a .nav-buttons {
+    display: none;
+}
+
+.thumbs > a.expanded .nav-buttons {
+    display: flex;
+}
+
+
+
 .thumbs > a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out;
     filter: grayscale(50%);
+}
+
+.thumbs > a.expanded img {
+    width: 100%;
+    height: auto;
 }
 
 .thumbs > a:hover img {

@@ -8,42 +8,75 @@ let currentIndex = 0;
 images.forEach((image, index) => {
     image.addEventListener('click', (e) => {
         e.preventDefault();
-        showLightbox(index);
+        const container = e.currentTarget;
+        
+        // Toggle expanded state
+        if (container.classList.contains('expanded')) {
+            container.classList.remove('expanded');
+            const navButtons = container.querySelector('.nav-buttons');
+            if (navButtons) navButtons.remove();
+        } else {
+            // Remove expanded class from any other images
+            images.forEach(img => img.classList.remove('expanded'));
+            
+            container.classList.add('expanded');
+            
+            // Add navigation buttons
+            const nav = document.createElement('div');
+            nav.className = 'nav-buttons';
+            nav.innerHTML = `
+                <button class="nav-button prev">❮</button>
+                <button class="nav-button next">❯</button>
+            `;
+            container.appendChild(nav);
+            
+            // Add navigation handlers
+            nav.querySelector('.prev').onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                images[currentIndex].click();
+            };
+            
+            nav.querySelector('.next').onclick = (e) => {
+                e.preventDefault(); 
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].click();
+            };
+        }
     });
 });
 
-function showLightbox(index) {
-    const lightbox = document.createElement('div');
-    lightbox.className = 'lightbox';
-    currentIndex = index;
 
-    const content = `
-        <span class="close">×</span>
-        <img src="${images[currentIndex].getAttribute('data-src')}" class="lightbox-content">
-        <span class="prev">❮</span>
-        <span class="next">❯</span>
-    `;
-    
-    lightbox.innerHTML = content;
-    document.body.appendChild(lightbox);
-    document.body.style.overflow = 'hidden';
 
-    // Event listeners
-    lightbox.querySelector('.close').onclick = () => {
-        document.body.removeChild(lightbox);
-        document.body.style.overflow = 'auto';
-    };
 
-    lightbox.querySelector('.prev').onclick = () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        lightbox.querySelector('.lightbox-content').src = images[currentIndex].getAttribute('data-src');
-    };
+document.addEventListener('click', (e) => {
+    // If click is outside any gallery image
+    if (!e.target.closest('.thumbs a')) {
+        // Remove expanded class from all images
+        images.forEach(img => {
+            img.classList.remove('expanded');
+            const navButtons = img.querySelector('.nav-buttons');
+            if (navButtons) navButtons.remove();
+        });
+    }
+});
 
-    lightbox.querySelector('.next').onclick = () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        lightbox.querySelector('.lightbox-content').src = images[currentIndex].getAttribute('data-src');
-    };
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Scroll animations
 const sections = document.querySelectorAll('.section');
