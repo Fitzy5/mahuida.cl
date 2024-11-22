@@ -97,10 +97,12 @@ nav ul li a:hover {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 /* Landing Page */
 .page-landing {
+    
     background-color: #1633a5;
     display: flex;
     background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
@@ -108,14 +110,32 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     padding: 0;
     padding-top: 10%;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.page-landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 .landing-text {
     flex: 3;
-    padding: 150px;
+    padding: 220px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
 }
 
 .landing-text ul {
@@ -398,6 +418,7 @@ footer {
     
     .page-landing {
         flex-direction: column;
+        
     }
     
     .landing-text {
