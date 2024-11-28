@@ -15,6 +15,10 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the image fixed while scrolling */
     
 }
 
@@ -35,11 +39,11 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     
 }
 nav ul {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -55,7 +59,7 @@ nav ul li.logo {
 }
 
 nav ul li.logo img {
-    max-width: 180px;
+    max-width: 280px;
     height: auto;
 }
 
@@ -104,7 +108,7 @@ nav ul li a:hover {
 /* Landing Page */
 .page-landing {
     
-    background-color: #1633a5;
+    background-color: #1633a500;
     display: flex;
     background-repeat: no-repeat;
     padding: 0;
@@ -114,19 +118,7 @@ nav ul li a:hover {
     
     
 }
-.page-landing::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
-    background-size: cover;
-    background-repeat: repeat;
-    filter: blur(0px);
-    z-index: -1;
-}
+
 
 .landing-text {
     flex: 3;
