@@ -1,3 +1,35 @@
+function updateNavBackground() {
+    const nav = document.querySelector('nav');
+    const options = {
+        threshold: 0.1 // Triggers when just 10% of the target is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                nav.classList.remove('transparent');
+            } else {
+                nav.classList.add('transparent');
+            }
+        });
+    }, options);
+
+    observer.observe(document.querySelector('.page-landing'));
+}
+
+// Call once when page loads
+document.addEventListener('DOMContentLoaded', updateNavBackground);
+
+
+
+
+
+
+
+
+
+
+
 // GSAP initialization
 gsap.registerPlugin(ScrollTrigger);
 
