@@ -1,7 +1,6 @@
 /* Reset and Base Styles */
 html {
     scroll-padding-top: 50px;
-
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -12,6 +11,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+
+
     
     
 }
@@ -31,12 +32,12 @@ h2 { font-size: 2em; }
 nav {
     position: relative; /* Change from fixed to relative */
     width: 80%;
-    background: rgb(236, 49, 49);
+    background: rgba(236, 49, 49, 0);
     transition: background-color 0.3s ease;
 }
 
 nav.transparent {
-    background: rgb(238, 10, 10);
+    background: rgba(238, 10, 10, 0);
 }
 
 .nav-container {
@@ -45,7 +46,7 @@ nav.transparent {
     width: 100%;
     transform: none; /* Remove the previous transform */
     left: auto; /* Remove the previous left positioning */
-    background: rgb(172, 9, 9);
+    background: rgba(172, 9, 9, 0);
 }
 nav ul {
     background-color: #ffffff00;
@@ -120,27 +121,29 @@ nav ul li a:hover {
     grid-template-columns: 30% 70%; /* Adjust these percentages as needed */
     height: 80vh;
     width: 100%;
+    margin-left: 10vh;
+    margin-right: 10vh;
 }
 .landing-left {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(21, 221, 71);
+    background: #163597;
 }
 
 .landing-right {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: rgb(226, 52, 174);
+    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
 }
 
 .landing-right-bottom {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1); /* Add your desired styling */
     padding: 20px;
-    background: rgba(187, 16, 144, 0.836);
+    background: rgba(187, 16, 144, 0);
 }
 .page-landing {
     
@@ -151,7 +154,7 @@ nav ul li a:hover {
     padding-top: 0%;
     position: relative;
     overflow: hidden;
-    background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    
     background-size: cover;
     height: 80vh;
 
@@ -217,12 +220,12 @@ nav ul li a:hover {
 #text-requisitos {
     
     
-    color: white;
+    color: rgb(0, 0, 0);
     flex: 1;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    background-color: #163597;
+    background-color: #ffffff;
    
 }
 
@@ -249,7 +252,7 @@ nav ul li a:hover {
     content: "•";
     position: absolute;
     left: 0;
-    color: #ffffff;
+    color: #000000;
     font-size: 1.5em;
 }
 
@@ -281,7 +284,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #163597;
+    background-color: #eff30b;
     
 }
 
@@ -297,6 +300,8 @@ nav ul li a:hover {
     display: flex;
     min-height: 100vh;
     scroll-snap-align: start;
+    margin: 0 10vh;
+    margin-top: 10vh;
 }
 
 #about {
