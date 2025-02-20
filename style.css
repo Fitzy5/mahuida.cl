@@ -121,8 +121,9 @@ nav ul li a:hover {
     grid-template-columns: 30% 70%; /* Adjust these percentages as needed */
     height: 80vh;
     width: 100%;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+
 }
 .landing-left {
     padding: 20px;
@@ -130,6 +131,8 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     background: #163597;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .landing-right {
@@ -137,13 +140,16 @@ nav ul li a:hover {
     flex-direction: column;
     height: 100%;
     background-image: url('casa_protegida_del_frio_con_una_bufanda.jpg');
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
 
 .landing-right-bottom {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1); /* Add your desired styling */
-    padding: 20px;
     background: rgba(187, 16, 144, 0);
+    
 }
 .page-landing {
     
@@ -154,6 +160,7 @@ nav ul li a:hover {
     padding-top: 0%;
     position: relative;
     overflow: hidden;
+    
     
     background-size: cover;
     height: 80vh;
@@ -171,6 +178,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 10px; /* Spacing between elements */
     padding: 20px;
+    
 }
 
 /* Add new class for your image */
@@ -300,8 +308,9 @@ nav ul li a:hover {
     display: flex;
     min-height: 100vh;
     scroll-snap-align: start;
-    margin: 0 10vh;
-    margin-top: 10vh;
+    margin: 0 5vh;
+    margin-top: 3vh;
+   
 }
 
 #about {
@@ -314,6 +323,7 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 40px;
+    border-radius: 20px;
 }
 
 #about h2 {
@@ -334,6 +344,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     background-color: #163597;
+    border-radius: 20px;
 }
 
 .thumbs > a {
@@ -502,3 +513,4 @@ footer {
         font-size: 1.1em;
     }
 }
+
